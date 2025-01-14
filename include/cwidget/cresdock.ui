@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cResDock</class>
+ <widget class="QDockWidget" name="cResDock">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#cResDock {
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+}
+</string>
+  </property>
+  <property name="windowTitle">
+   <string>资源管理器</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <property name="styleSheet">
+    <string notr="true">QWidget#dockWidgetContents {
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>2</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="find" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#find {
+    background-color: #bababa; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="tree" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget#tree {
+    background-color: #bababa; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="topMargin">
+        <number>3</number>
+       </property>
+       <property name="rightMargin">
+        <number>3</number>
+       </property>
+       <property name="bottomMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QTreeWidget" name="resTree">
+         <property name="styleSheet">
+          <string notr="true">QWidget#resTree {
+    background-color: #bababa; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+}</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

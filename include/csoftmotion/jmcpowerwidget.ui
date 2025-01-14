@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>jmcPowerWidget</class>
+ <widget class="QWidget" name="jmcPowerWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>56</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="cSuperBtn" name="powerOn">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>28</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+   </property>
+   <property name="text">
+    <string>powerOn</string>
+   </property>
+  </widget>
+  <widget class="cSuperBtn" name="inPower">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>0</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+   </property>
+   <property name="text">
+    <string>inPower</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+   </property>
+   <property name="text">
+    <string>使能</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="cSuperBtn" name="drvStart">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>28</y>
+     <width>171</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+   </property>
+   <property name="text">
+    <string>drvStart</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>cSuperBtn</class>
+   <extends>QPushButton</extends>
+   <header>include/cwidget/cSuperBtn.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

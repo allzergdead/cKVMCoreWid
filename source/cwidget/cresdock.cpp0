@@ -1,0 +1,127 @@
+#include "../cwidget/cresdock.h"
+#include "ui_cresdock.h"
+#include <QHash>
+
+// QT JSON
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QJsonValue>
+
+// QT SQL
+#include <QSql>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QMutex>
+
+
+#include <QTreeWidgetItem>
+#include <QTreeWidget>
+
+
+QHash<QString, cBaseCreater> cResDock::pageCreat;
+
+
+cResDock::cResDock(QWidget *parent) :
+    QDockWidget(parent),
+    ui(new Ui::cResDock)
+{
+    ui->setupUi(this);
+    QJsonObject obj =  getBaseObj();
+    addNode(obj, nullptr , ui->resTree);
+}
+
+cResDock::~cResDock()
+{
+    delete ui;
+}
+QJsonObject cResDock::getResObj(QString name, QString icon, QString pageclass)
+{
+    QJsonObject obj;
+    obj[u8"name"] = name;
+    obj[u8"icon"] = icon;
+    obj[u8"pageclass"] = pageclass;
+    return obj;
+}
+QJsonObject cResDock::getBaseObj()
+{
+    QJsonObject obj;
+    // Hardware;
+    QJsonObject Hardware = getResObj(u8"Hardware",u8"G://icon//hardware.png",u8"");
+
+    QJsonObject Cores = getResObj(u8"Cores", u8"G://icon//cpu.png", u8"");
+
+    QJsonObject EtherCat = getResObj(u8"EtherCat", u8"G://icon//ethercat.png", u8"");
+    QJsonObject Axes = getResObj(u8"Axes", u8"G://icon//axis.png", u8"");
+    QJsonObject Slaves = getResObj(u8"Slaves", u8"G://icon//slavepdo.png", u8"");
+
+    Hardware[u8"Cores"] = Cores;
+
+    EtherCat[u8"Axes"] = Axes;
+    EtherCat[u8"Slaves"] = Slaves;
+    Hardware[u8"EtherCat"] = EtherCat;
+
+    obj[u8"Hardware"] = Hardware;
+    // Tasks
+    QJsonObject Tasks = getResObj(u8"Tasks", u8"G://icon//tasks.png", u8"");
+
+    obj[u8"Tasks"] = Tasks;
+
+    return obj;
+}
+int cResDock::regPageCreater(cBaseCreater creater)
+{
+
+    return 0;
+}
+void cResDock::addNode(const QJsonObject& nodeData, QTreeWidgetItem* parentItem, QTreeWidget* treeWidget) {
+    // 遍历 QJsonObject 的子项（第一层）
+    for (const QString& key : nodeData.keys()) {
+        const QJsonValue& value = nodeData[key];
+
+        // 获取图标路径和名称，如果存在
+        QString name = key;  // 使用键作为名称
+        QString iconPath = value.toObject().contains("icon") ? value.toObject()["icon"].toString() : "";  // 从子项获取图标路径
+        if (key == u8"name" || key == "icon" || key == "pageclass") {
+            continue;
+        }
+        // 创建树节点
+        QTreeWidgetItem* item = new QTreeWidgetItem();
+        item->setText(0, name);  // 设置节点文本为名称
+        item->setIcon(0, QIcon(iconPath));  // 设置图标
+
+        // 如果有父节点，则将当前节点添加到父节点中
+        if (parentItem) {
+            parentItem->addChild(item);
+        }
+        else {
+            // 否则直接将此节点添加为顶级节点
+            treeWidget->addTopLevelItem(item);
+        }
+
+        // 如果该值是 QJsonObject，递归调用 addNode 来处理子项
+
+        if (value.isObject()) {
+            addNode(value.toObject(), item, treeWidget);  // 递归处理 QJsonObject 子项
+        }
+        else if (value.isArray()) {
+            // 如果该值是 QJsonArray，递归处理数组中的 QJsonObject
+            QJsonArray array = value.toArray();
+            for (const QJsonValue& arrItem : array) {
+                if (arrItem.isObject()) {
+                    addNode(arrItem.toObject(), item, treeWidget);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

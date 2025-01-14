@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cEtherCATPage</class>
+ <widget class="QWidget" name="cEtherCATPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="ETCTab">
+     <property name="styleSheet">
+      <string notr="true">/* 仅对名为 mainTab 的 QTabWidget 应用样式 */
+#ETCTab {
+    background-color: #3a3a3a;
+    border: 2px solid #b0b0b0;
+}
+
+#ETCTab QTabBar::tab {
+    background: #505050;
+    color: #eeeeee;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #3a3a3a;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+#ETCTab QTabBar::tab:hover {
+    background: #606060;
+    border: 1px solid #b0b0b0;
+}
+
+#ETCTab QTabBar::tab:selected {
+    background: #3a3a3a;
+    border: 2px solid #b0b0b0;
+    color: #ffffff;
+}
+
+#ETCTab QTabWidget::pane {
+    border: 2px solid #b0b0b0;
+    background: #3a3a3a;
+}
+</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>监控页</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QWidget" name="widget" native="true">
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>30</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>主站编号</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_6">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>180</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>主站循环次数统计</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="ecNo">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>30</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_4">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>120</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>主站状态</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="etc_state">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>120</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="etc_task_counter">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>180</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="axis_Num">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>90</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="pdoSize">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>60</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_3">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>90</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>轴总数</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>60</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>从站总数</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_5">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>150</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>EtherCAT周期</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="cycle">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>150</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_period_sum">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>390</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_9">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>90</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>最新执行耗时</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_19">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>390</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>总周期时间</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_period_max">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>330</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_18">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>360</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>最小周期</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_period_avg">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>300</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_12">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>240</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>最小耗时</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_cost_avg">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>180</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_16">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>270</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>总耗时时间</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_period_min">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>360</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_period">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>120</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_cost_max">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>210</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="clear">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>60</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_11">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>150</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>周期数统计</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_cost_min">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>240</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_15">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>300</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>平均周期</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_10">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>120</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>最新周期</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_8">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>60</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>清空计数</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_countor">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>150</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_cost">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>90</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="cpu">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>30</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="cSuperBtn" name="task_cost_sum">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>270</y>
+            <width>151</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_14">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>180</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>平均耗时</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_7">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>30</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>主站cpu核心</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_17">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>330</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>最大周期</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_13">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>370</x>
+            <y>210</y>
+            <width>171</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"> 
+    background-color: #3a3a3a; /* 更浅的灰色背景 */
+    color: #eeeeee; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border: 2px solid #b0b0b0;
+
+</string>
+          </property>
+          <property name="text">
+           <string>最大耗时</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>cSuperBtn</class>
+   <extends>QPushButton</extends>
+   <header>include/cwidget/cSuperBtn.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

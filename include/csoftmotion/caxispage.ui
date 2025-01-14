@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cAxisPage</class>
+ <widget class="QWidget" name="cAxisPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="jmcPowerWidget" name="power" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>350</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#power{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+  <widget class="jmcJogWidget" name="jog" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>350</width>
+     <height>270</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#jog{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+  <widget class="jmcMoveAbsWdiget" name="moveabs" native="true">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>90</y>
+     <width>350</width>
+     <height>270</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#moveabs{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+  <widget class="jmcMoveVelWidget" name="movevel" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>350</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#movevel{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+  <widget class="jmcSetPosWidget" name="jmcsetpos" native="true">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>370</y>
+     <width>350</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#jmcsetpos{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+  <widget class="jmcWtmtCCWidget" name="jmccc" native="true">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>530</y>
+     <width>350</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#jmccc{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+  <widget class="jmcStopWidget" name="jmcstop" native="true">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>90</y>
+     <width>350</width>
+     <height>180</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#jmcstop{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+  <widget class="jmcHomeWidget" name="jmchome" native="true">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>280</y>
+     <width>350</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#jmchome{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+  <widget class="jmcResetWidget" name="jmcreset" native="true">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>440</y>
+     <width>350</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#jmcreset{
+    background-color: #888888; /* 更浅的灰色背景 */
+    color: #ffffff; /* 更亮的灰色字体，提高可读性 */
+    font-size: 14px; /* 字体大小适中 */
+     border:2px solid #2c2c2c;
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>jmcPowerWidget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmcpowerwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>jmcJogWidget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmcjogwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>jmcMoveAbsWdiget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmcmoveabswdiget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>jmcMoveVelWidget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmcmovevelwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>jmcSetPosWidget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmcsetposwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>jmcWtmtCCWidget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmcwtmtccwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>jmcStopWidget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmcstopwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>jmcHomeWidget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmchomewidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>jmcResetWidget</class>
+   <extends>QWidget</extends>
+   <header>include/csoftmotion/jmcresetwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
